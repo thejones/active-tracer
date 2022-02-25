@@ -1,42 +1,53 @@
-<h1 align="center" style="border-bottom: none;">⚒️ whip-tail</h1>
+<h1 align="center" style="border-bottom: none;">⚒️ active tracer</h1>
 
-<h3 align="center">My smashing package</h3>
+<h3 align="center">OTEL plugins I commonly use.</h3>
 
 <p align="center">
         <a href="./LICENSE">
     <img alt="license" src="https://img.shields.io/badge/license-ISC-blue.svg" />
   </a> <a href="https://requirejs.org/docs/commonjs.html">
       <img alt="commonjs module" src="https://img.shields.io/badge/module-CommonJS-blue" />
-    </a> <a href="https://www.npmjs.com/package/whip-tail">
-    <img alt="npm version" src="https://img.shields.io/npm/v/whip-tail.svg?style=flat" />
-  </a> <a href="https://www.npmjs.com/package/whip-tail">
-    <img alt="npm downloads" src="https://img.shields.io/npm/dt/whip-tail.svg?style=flat" />
-  </a> <a href="https://github.com/epranka/create-package">
-    <img alt="generated with" src="https://img.shields.io/badge/generated%20with-%40epranka%2Fcreate--package-blue" />
-  </a>
+    </a> <a href="https://www.npmjs.com/package/active-tracer">
+    <img alt="npm version" src="https://img.shields.io/npm/v/active-tracer.svg?style=flat" />
+  </a> <a href="https://www.npmjs.com/package/active-tracer">
+    <img alt="npm downloads" src="https://img.shields.io/npm/dt/active-tracer.svg?style=flat" />
+  </a> 
     </p>
 
 ## Install
-```
-npm install --save whip-tail
-```
-
-or
 
 ```
-yarn install whip-tail
+npm install --save active-tracer
 ```
-  
-
-## Import module
-Comming soon
-  
 
 ## Usage
-Comming soon
-  
+
+```
+// index.js
+require("active-tracer")({
+  serviceName: 'My Service Name',
+  pinoInstrumentationOptions: {}, // just passes into this plugin
+  expressInstrumentationOptions: {},
+  pgInstrumentationOptions: {},
+});
+```
+
+```
+serviceName is a string. All others are objects.
+{
+  serviceName: '' //dafualt to 'UNKNOWN_SERVICE,
+  expressInstrumentationOptions: {},
+  fastifyInstrumentationOptions: {},
+  pgInstrumentationOptions: {},
+  pinoInstrumentationOptions: {},
+  graphQlInstrumentationOptions: {},
+  redisInstrumentationOptions: {},
+}
+
+```
 
 ## Build
+
 ```
 npm run build // for single build
 
@@ -50,13 +61,13 @@ yarn build // for single build
 
 yarn watch // to watch changes
 ```
-  
 
 ## Author
 
 [alexander.t.jones@gmail.com](mailto:alexander.t.jones@gmail.com)
 
 ## License
+
 ISC License
 
 Copyright (c) 2022 alexander.t.jones@gmail.com
@@ -72,4 +83,3 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-  
