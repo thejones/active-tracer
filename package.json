@@ -1,7 +1,7 @@
 {
   "name": "active-tracer",
   "description": "My tracer.js file.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "build": "rollup -c",
